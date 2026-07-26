@@ -1,0 +1,16 @@
+#############################libnfc_accesscard_config.conf###################################
+# NXP_RF_CONF_BLK_1 block
+# A0,   6A,   10,   1C,   02,   1C,   02,   1C,   02,   1C,   02,   00,   00,   00,   00,   00,   00,   00,   00
+#add A0, 85, 04, 50, 0A, A8, 2C for mute RATS on Mifare 1K 2020.04.02 bugid:2917116
+# NXP_RF_CONF_BLK_12 block
+# A1,   0E,   02,   60,   00, change Tx2Rx time, the FW default value is 0x60
+# The access card Tx2Rx will be set 0x40 and the A0,   0D,   06,   62/67,   32 register will be set 0xAE/0x0E -> 0x2E
+
+OPLUS_CONF_EXTN={
+    20, 02, 22, 04,
+    A0, 3A, 08, C8, 00, C8, 00, C8, 00, C8, 00,
+    A0, 38, 04, 04, 07, 07, 00,
+    A0, 0D, 03, 9C, 15, 7E,
+    A0, 0D, 06, CA, 2D, 15, 34, 1F, 01
+}
+##############################NEED THIS LINE TO END FILE#####################################
